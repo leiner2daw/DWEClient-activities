@@ -51,3 +51,6 @@ function clasificarNumero(n) {
 
 const resultadoAnalisis = clasificarNumero(n);
 console.log(resultadoAnalisis);
+
+const mostrarMensaje = document.getElementById('mostrarMensaje');
+mostrarMensaje.innerText = "Mensaje:\n" + resultadoAnalisis;
