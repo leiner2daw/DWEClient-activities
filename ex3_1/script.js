@@ -1,4 +1,4 @@
-const n = 28;
+const n = 27;
 
 function sumaDivisoresPropios(n) {
     let sumaDivisoresPropio = 0;
@@ -22,6 +22,10 @@ function sumaDivisoresPropios(n) {
     };
 }
 
+function esPrimo(n, suma) {
+    return suma === 1 && n > 1;
+}
+
 function clasificarNumero(n) {
     if (n < 1) return "No es valido tu number";
 
@@ -31,12 +35,14 @@ function clasificarNumero(n) {
 
     let resultado = "";
 
-    if (suma === 1) resultado += `${n} es primo.\n`;
+    if (esPrimo(n, suma)) resultado += `${n} es primo.\n`;
+    else resultado += `${n} no es primo.\n`;
 
-    if (n % 2 === 0) resultado += `${n} es par.\n`;
+    if (n % 2 === 0) resultado += `${n} es Par.\n`;
+    else resultado += `${n} es Impar\n`;
 
-    if (suma === n) resultado += `${n} es perfecto.\n`;
-    else `${n} no es perfecto`
+    if (suma === n) resultado += `${n} es Perfecto.\n`;
+    else resultado += `${n} no es Perfecto.\n`;
 
     resultado += `Divisores propios: ${cadena}\nSuma de divisores propios: ${suma}`;
 
