@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios 3.2</title>
+</head>
+
+<body>
+    <h1>Calculemos el importe de su vehiculo.</h1>
+
+    <div id="contenedor">
+        <label for="entrada">Hora de entrada:</label>
+        <input type="text" id="entrada" placeholder="HH:MM">
+        <p id="errorEntrada" style="color: red;"></p>
+
+        <label for="salida">Hora de salida:</label>
+        <input type="text" id="salida" placeholder="HH:MM">
+        <p id="errorSalida" style="color: red;"></p>
+
+        <label for="tipoCoche">Tipo de coche:</label>
+        <select id="tipoCoche" required>
+            <option value="0">Seleccionar</option> <!-- Vuelve a pedir  --->
+            <option value="1">Sin descuento</option>
+            <option value="2">Vehículo eléctrico: 20%</option>
+            <option value="3">Residente: 30%</option>
+        </select>
+
+        <p id="resultado" style="font-weight: bold; margin-top: 15px;"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
